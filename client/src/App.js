@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import socketIOClient from "socket.io-client";
+import VideoPlayer from "./components/Videoplayer";
+import APIKEY from "./apikey";
+import SearchBar from "./components/SearchBar";
 
 class App extends Component {
   constructor() {
@@ -19,13 +22,9 @@ class App extends Component {
   render() {
     const { response } = this.state;
     return (
-        <div style={{ textAlign: "center" }}>
-          {response
-              ? <p>
-                The temperature in Florence is: {response} °F
-              </p>
-              : <p>Loading...</p>}
-        </div>
+      <div>
+        <VideoPlayer />
+      </div>
     );
   }
 }
