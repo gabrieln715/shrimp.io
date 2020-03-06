@@ -6,6 +6,7 @@ const PlaylistVideo = props => {
       <div style={{ height: "180px", width: "320px" }}>
         <img
           src={props.snippet.thumbnails.medium.url}
+          alt="Loading"
           onClick={() => props.onClick(props.id)}
           style={{ height: "100%", width: "100%" }}
         ></img>
