@@ -4,3 +4,71 @@
   margin: 10px;
   cursor: pointer;
 }
+.outerContainer {
+  display: flex;
+  
+
+}
+
+.Join {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 38px;
+  padding: 20px;
+}
+
+.leftContainer {
+  flex-grow: 1.5;
+  margin: 10px;
+  padding: 20px;
+}
+
+.rightContainer {
+  margin: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  flex-grow: 1;
+  height: 600px;
+}
+
+.infobar {
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 28px;
+  
+}
+
+.messages {
+  padding: 5% 0;
+  overflow: auto;
+  flex: auto;
+  display:inline-block;
+  font-size: 18px;
+}
+
+.form {
+  display: flex;
+  border-top: 2px solid #D3D3D3;
+}
+
+.input {
+  border: none;
+  border-radius: 0;
+  padding: 5%;
+  width: 80%;
+  font-size: 1.2em;
+}
+
+.sendButton {
+  text-transform: uppercase;
+  padding: 20px;
+  display: inline-block;
+  border: none;
+  width: 20%;
+}

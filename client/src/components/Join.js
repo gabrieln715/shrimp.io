@@ -6,7 +6,7 @@ const Join = () => {
   const [room, setRoom] = useState("");
 
   return (
-    <div>
+    <div className="Join">
       <div>
         <h1>Join</h1>
         <div>
