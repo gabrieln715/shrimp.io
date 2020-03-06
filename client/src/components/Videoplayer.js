@@ -2,9 +2,11 @@ import React, { Component } from "react";
 import YouTube from "react-youtube";
 import SearchBar from "./SearchBar";
 import Axios from "axios";
-import APIKEY from "../apikey";
+// import APIKEY from "../apikey";
 import Playlist from "./Playlist";
 import io from "socket.io-client";
+
+
 
 const endpoint = "localhost:4001";
 let socket = io(endpoint);
@@ -30,7 +32,7 @@ class Videoplayer extends Component {
       socket.emit("changeVideo", { video: id });
     } else {
       Axios.get(
-        `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=${this.state.value}&key=${APIKEY}`
+        `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=${this.state.value}&key=${ENV_VAR_APIKEY}`
       )
         .then(data => this.setState({ searchresult: data.data.items }))
         .catch(err => console.log(err));
